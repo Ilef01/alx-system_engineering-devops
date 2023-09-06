@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -aR | find . -name "*.git" | rev | cut -d '.' -f 2- | cut -d '/' -f 1 | rev | LC_ALL=C sort -f
+ls -aR | find . -name "*.gif" | rev | cut -d '.' -f 2- | cut -d '/' -f 1 | rev | LC_ALL=C sort -f
