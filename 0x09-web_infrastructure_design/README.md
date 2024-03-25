@@ -93,3 +93,11 @@ A failure of this single server will predictably lead to the site being unavaila
 fixed and re-deployed.
 
 ### Scaling
+
+This architecture, though sufficient enough for a few requests, does not scale at all if the number of requests
+\
+approaches the limit of the only server that is present at the moment.
+\
+This can be remedied by adding another server to distribute the load requests and—by extension—handle even more
+\
+requests from more clients.
