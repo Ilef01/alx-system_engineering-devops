@@ -103,6 +103,8 @@ This can be remedied by adding another server to distribute the load requests an
 requests from more clients.
 
 ---
+---
+---
 
 ## `1. Distributed web infrastructure`
 
@@ -113,3 +115,97 @@ requests from more clients.
 Here is the same diagram for easy reference
 ![1. Distributed web infrastructure](https://raw.githubusercontent.com/josfam/ALX-screenshots/main/0x09.Web-Infrastructure-Design/Ilef-Bchini_Joseph-Amukun_1-Distributed-Web-Infrastructure.png)
 
+### Explanation of changes made from previous model
+
+_(The numbering here closely matches the numbering in the diagram)_
+\
+\
+`5` **An extra server**:
+\
+For redundancy and resilience in case one of the servers fails, or is overwhelmed
+\
+with requests. This setup allows for one server to fully take over in case of a complete failure of the
+\
+other server.
+\
+\
+`4` **A load balancer (HAproxy)**:
+\
+This handles even distribution of requests between the two servers, thereby reducing load on the servers.
+
+- `Load balancing distribution algorithm`:
+\
+**Least connections** is the algorithm we chose due to it's relative simplicity in terms of implementation.
+\
+Least connections sends an incoming request to the server with the least numbers of connections,
+\
+which causes an even load on the servers, as a currently overwhelmed server will not continue to be
+\
+overwhelmed by incoming requests if the other server is free to handle said requests.
+
+- `Active-active scheme`:
+\
+The load balancer employs an active-active setup for the servers whereby each server handles requests
+\
+simultaneously, in that there is no server that will be idle.
+\
+This makes sure that the resources that are present in the setup are actively being utilized, and not
+\
+wasted.
+\
+Furthermore, should one server fail, the other server can take over the work of accepting requests
+\
+and sending back responses, until the failed server is up and running again.
+
+`6` Databases setup in a primary-replica (master-replica) cluster.
+
+- `Primary database` vs `Replica database`:
+\
+The primary database can read and write database records, and can communicate the new database state
+\
+to any replica databases in the cluster. This ensures that data is synchronized across all databases
+\
+in the arrangement.
+\
+The replicated data also provides data resilience in case the primary database fails.
+\
+\
+The replica database can only read records of the database, and cannot write data there.
+\
+Replica databases receive updates from the primary database concerning the updated state of the
+\
+database, and therefore act as data backups.
+\
+Moreover, if the primary database fails, a replica database can be promoted to become the new primary
+\
+database, seeing as the state of the data should be identical.
+
+### Remaining Single Points of Failure (SPOF)
+
+Despite being more scalable than the previous architecture, there are still points of failure.
+
+- The load balancer:
+\
+There is still just one load balancer which, when it does fail, will cause a disruption across the
+\
+servers as well, rendering the site unreachable.
+
+### Security issues
+
+- Communications are not happening over HTTPS:
+\
+Currently, the communication between client and server is not encrypted in transit, leaving the entire
+\
+path vulnerable to all sorts of attacks.
+
+- There is no firewall:
+\
+All traffic to the server is not currently being filtered, and is let through as is.
+\
+This opens up servers and their components to all sorts of attacks including SQL injections, and the like.
+
+### Monitoring
+
+- There is no resource monitoring in this architecture, which means that impending overloads or other failure
+\
+types cannot currently be detected in time for a fix to be issued before the point of failure.
