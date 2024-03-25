@@ -108,7 +108,7 @@ requests from more clients.
 
 ### Diagram link and reference image for task 1
 
-🔗 **imgur link to the diagram:** [Click here](https://imgur.com/a/v5Y62Oo)
+🔗 **imgur link to the diagram:** [Click here](https://imgur.com/a/gfxVu7p)
 
 Here is the same diagram for easy reference
-![1. Distributed web infrastructure](https://i.imgur.com/u8skxew.png)
+![1. Distributed web infrastructure](https://i.imgur.com/TktXRc0.png)
