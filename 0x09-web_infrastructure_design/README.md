@@ -108,7 +108,7 @@ requests from more clients.
 
 ### Diagram link and reference image for task 1
 
-🔗 **imgbb link to the diagram:** [Click here](https://ibb.co/qsfDhSt)
+🔗 **imgbb link to the diagram:** [Click here](https://ibb.co/K7PYj4v)
 
 Here is the same diagram for easy reference
-![1. Distributed web infrastructure](https://i.ibb.co/wWXd8k9/Ilef-Bchini-Joseph-Amukun-0x09-Web-infrastructure-design-1-Distributed-Web-Infrastructure.png)
+![1. Distributed web infrastructure](https://i.ibb.co/wCkTNGm/Ilef-Bchini-Joseph-Amukun-1-Distributed-Web-Infrastructure.png)
