@@ -1,3 +1,6 @@
 # diagramming files
 *.drawio
 *.drawio.bkp
+
+#.swp files
+*.swp
