@@ -209,3 +209,16 @@ This opens up servers and their components to all sorts of attacks including SQL
 - There is no resource monitoring in this architecture, which means that impending overloads or other failure
 \
 types cannot currently be detected in time for a fix to be issued before the point of failure.
+
+---
+---
+---
+
+## `2. Secured and monitored web infrastructure`
+
+### Diagram link and reference image for task 2
+
+🔗 **Link to the diagram:** [Click here](https://github.com/josfam/ALX-screenshots/blob/main/0x09.Web-Infrastructure-Design/Ilef-Bchini_Joseph-Amukun_2-Secured-and-monitored-web-infrastructure.png)
+
+Here is the same diagram for easy reference
+![1. Distributed web infrastructure](https://raw.githubusercontent.com/josfam/ALX-screenshots/main/0x09.Web-Infrastructure-Design/Ilef-Bchini_Joseph-Amukun_2-Secured-and-monitored-web-infrastructure.png)
