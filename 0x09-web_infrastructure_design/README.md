@@ -8,7 +8,7 @@ For the ALX project `0x09. Web infrastructure design`.
 
 ### Diagram link and reference image for task 0
 
-🔗 **Imgur link to the diagram:** [Click here](https://imgur.com/6k5Y8vt)
+🔗 **Link to the diagram:** [Click here](https://imgur.com/6k5Y8vt)
 
 Here is the same diagram for easy reference
 ![0. Simple web stack](https://i.imgur.com/6k5Y8vt.png)
@@ -108,7 +108,8 @@ requests from more clients.
 
 ### Diagram link and reference image for task 1
 
-🔗 **imgur link to the diagram:** [Click here](https://imgur.com/a/gfxVu7p)
+🔗 **Link to the diagram:** [Click here](https://github.com/josfam/ALX-screenshots/blob/main/0x09.Web-Infrastructure-Design/Ilef-Bchini_Joseph-Amukun_1-Distributed-Web-Infrastructure.png)
 
 Here is the same diagram for easy reference
-![1. Distributed web infrastructure](https://i.imgur.com/TktXRc0.png)
+![1. Distributed web infrastructure](https://raw.githubusercontent.com/josfam/ALX-screenshots/main/0x09.Web-Infrastructure-Design/Ilef-Bchini_Joseph-Amukun_1-Distributed-Web-Infrastructure.png)
+
