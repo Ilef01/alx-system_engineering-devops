@@ -4,9 +4,9 @@ For the ALX project `0x09. Web infrastructure design`.
 
 ## Tasks explanations, notes and answers
 
-## 0. Simple web stack
+## `0. Simple web stack`
 
-### Diagram link and reference image
+### Diagram link and reference image for task 0
 
 🔗 **Imgur link to the diagram:** [Click here](https://imgur.com/6k5Y8vt)
 
