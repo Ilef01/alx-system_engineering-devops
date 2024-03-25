@@ -8,10 +8,10 @@ For the ALX project `0x09. Web infrastructure design`.
 
 ### Diagram link and reference image for task 0
 
-🔗 **Link to the diagram:** [Click here](https://imgur.com/6k5Y8vt)
+🔗 **Link to the diagram:** [Click here](https://imgur.com/As325hc)
 
 Here is the same diagram for easy reference
-![0. Simple web stack](https://i.imgur.com/6k5Y8vt.png)
+![0. Simple web stack](https://i.imgur.com/As325hc.png)
 
 ---
 
