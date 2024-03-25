@@ -101,3 +101,14 @@ approaches the limit of the only server that is present at the moment.
 This can be remedied by adding another server to distribute the load requests and—by extension—handle even more
 \
 requests from more clients.
+
+---
+
+## `1. Distributed web infrastructure`
+
+### Diagram link and reference image for task 1
+
+🔗 **imgbb link to the diagram:** [Click here](https://ibb.co/qsfDhSt)
+
+Here is the same diagram for easy reference
+![1. Distributed web infrastructure](https://i.ibb.co/wWXd8k9/Ilef-Bchini-Joseph-Amukun-0x09-Web-infrastructure-design-1-Distributed-Web-Infrastructure.png)
