@@ -8,9 +8,10 @@ For the ALX project `0x09. Web infrastructure design`.
 
 ### Diagram link and reference image
 
-**Google Drive link to the diagram:** [Click here](https://drive.google.com/file/d/1mVbaj-w7oi3bqx1obdjcSpy-2gHZIQX0/view?usp=drive_link)
+🔗 **Imgur link to the diagram:** [Click here](https://imgur.com/6k5Y8vt)
 
-Here is the same diagram for easy reference:
+Here is the same diagram for easy reference
+![0. Simple web stack](https://i.imgur.com/6k5Y8vt.png)
 
 ---
 
@@ -74,8 +75,21 @@ PHP, JavaScript, Python, Ruby, and so on.
 \
 Application files also involve the various configuration files that take part in the web serving process.
 \
-`5. Response to the client`
+
+`5.` Response to the client
 \
 After the static and dynamic content has been generated, the full response is sent back to the client
 \
 via the TCP/IP channel that was established earlier.
+
+### Single Points of Failure (SPOF)
+
+In this architecture, the server itself is a single point of failure, because there currently is no backup
+\
+server in case the only one that is there fails.
+\
+A failure of this single server will predictably lead to the site being unavailable until the server has been
+\
+fixed and re-deployed.
+
+### Scaling
