@@ -308,3 +308,32 @@ The imbalance in resource distribution cannot be achieved if the servers are ide
 ---
 ---
 ---
+
+## `3. Scale up`
+
+### Diagram link and reference image for task 3
+
+🔗 **Link to the diagram:** [Click here](https://raw.githubusercontent.com/josfam/ALX-screenshots/main/0x09.Web-Infrastructure-Design/Ilef-Bchini_Joseph-Amukun_3-Scale-Up.png)
+
+Here is the same diagram for easy reference
+![1. Distributed web infrastructure](https://raw.githubusercontent.com/josfam/ALX-screenshots/main/0x09.Web-Infrastructure-Design/Ilef-Bchini_Joseph-Amukun_3-Scale-Up.png)
+
+### Changes made from the second model
+
+_(The numbering here closely matches the numbering in the diagram)_
+\
+\
+`4` **Load balancers arranged in a cluster**
+\
+Instead of just one load balancer, there are now two load balancers,arranged in a cluster
+\
+such that if one fails, the other can take over.
+\
+\
+`5`, `6`, `7` **All components now belong in there own server**
+\
+Instead of the web server, application server, code base, and Mysql databases being contained in
+\
+the same server, they have now been spread out into their own servers, to make sure that each component
+\
+can scale individually without affecting necessarily anything else.
