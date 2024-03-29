@@ -222,3 +222,89 @@ types cannot currently be detected in time for a fix to be issued before the poi
 
 Here is the same diagram for easy reference
 ![1. Distributed web infrastructure](https://raw.githubusercontent.com/josfam/ALX-screenshots/main/0x09.Web-Infrastructure-Design/Ilef-Bchini_Joseph-Amukun_2-Secured-and-monitored-web-infrastructure.png)
+
+### Changes made from previous model
+
+_(The numbering here closely matches the numbering in the diagram)_
+\
+\
+`4`, `5` **Three firewalls on load balancer and two servers**:
+\
+The firewalls on each of the components filter out particular network traffic,
+\
+and make this architecture more secure from many attack surfaces like SQL injections.
+\
+\
+`3`, `6` **Communication over HTTPS.**:
+\
+Unlike HTTP, HTTPS makes sure that the communications between the client and the
+\
+server happen over an encrypted channel.
+\
+This prevents web traffic from being extracted (and understood) by a middle Man / unauthorized third party.
+\
+\
+`5` **Monitoring with Sumologic**:
+\
+Monitoring is used to track the performance (and other statistics about the system),
+\
+in order to check If there is a problem with any of the components, which can help find a resolution
+\
+sooner rather than later.
+
+- **Overall picture of monitoring:**
+\
+The monitoring system comprises of a client that collects the data, and then sends said data
+\
+to a monitoring system that can crunch the data, and present it in a manner that is useful
+\
+for decision-making.
+
+- **Monitoring the web server's Queries Per Second(QPS)**
+\
+Monitoring QPS with sumologic is as easy as specifying the conditions that should occur
+\
+for there to be a trigger, and then waiting to see if the system does get triggered.
+\
+Any remedies can then be issued as per policy.
+
+### Remaining issues
+
+- **SSL termination at the load balancer**
+\
+Terminating SSL at the load balancer means that the HTTPS encrypted channel stops at the load balancer,
+\
+and therefore any communication between the load balancer and the servers is unencrypted.
+\
+Any malicious attacker who was operating between the load End the server will ,therefore, be able to
+\
+access the communication in the clear.
+- **Single points of failure (SPOF)**
+\
+Because still only one of them exists, the load balancer remains a single point of failure in the
+\
+architecture.
+
+- **Only one MYSQL server is capable of writing to the database (only one master)**
+\
+Having only one master means that the system is suddenly inoperable (in terms of writing data) to the
+\
+database, if that singular master goes down.
+\
+This is also a single point of failure.
+
+- **Identical servers with identical components**
+\
+Having identical servers, while promoting redundancy, also limits configuration in terms of custom
+\
+resource distribution.
+\
+If users tend to request a lot of data from server 2 over the weekend for example, then it may require
+\
+more application servers and more database servers than server 1.
+\
+The imbalance in resource distribution cannot be achieved if the servers are identical.
+
+---
+---
+---
